@@ -1,10 +1,10 @@
 var counter = document.querySelector('p');
-var firstSection = document.querySelector('section.welkom');
-var secondSection = document.querySelector('section:nth-of-type(2)');
-var thirdSection = document.querySelector('section:nth-of-type(3)');
-var fourthSection = document.querySelector('section:nth-of-type(4)');
-var fifthSection = document.querySelector('section:nth-of-type(5)');
-var sixthSection = document.querySelector('section:nth-of-type(6)');
+var firstSection = document.querySelector('div.circle:first-child');
+var secondSection = document.querySelector('div.circle:nth-of-type(2)');
+var thirdSection = document.querySelector('div.circle:nth-of-type(3)');
+var fourthSection = document.querySelector('div.circle:nth-of-type(4)');
+var fifthSection = document.querySelector('div.circle:nth-of-type(5)');
+var sixthSection = document.querySelector('div.circle:nth-of-type(6)');
 
 function countHeight(){
   counter.innerHTML="height = " + window.pageYOffset;
@@ -28,17 +28,17 @@ function changeColor(){
     thirdSection.classList.add('white');
     fourthSection.classList.remove('white');
   }
-  if(height > 2000){
+  if(height > 1850){
     thirdSection.classList.remove('white');
     fourthSection.classList.add('white');
     fifthSection.classList.remove('white');
   }
-  if(height > 2750){
+  if(height > 2500){
     fourthSection.classList.remove('white');
     fifthSection.classList.add('white');
     sixthSection.classList.remove('white');
   }
-  if(height > 3480){
+  if(height > 3100){
     fifthSection.classList.remove('white');
     sixthSection.classList.add('white');
   }
