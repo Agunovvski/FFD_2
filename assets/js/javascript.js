@@ -1,10 +1,10 @@
 var counter = document.querySelector('p');
-var firstSection = document.querySelector('div.circle:first-child');
-var secondSection = document.querySelector('div.circle:nth-of-type(2)');
-var thirdSection = document.querySelector('div.circle:nth-of-type(3)');
-var fourthSection = document.querySelector('div.circle:nth-of-type(4)');
-var fifthSection = document.querySelector('div.circle:nth-of-type(5)');
-var sixthSection = document.querySelector('div.circle:nth-of-type(6)');
+var firstSection = document.querySelector('div.circle:first-of-type');
+var secondSection = document.querySelector('ul li:nth-of-type(2) a div.circle');
+var thirdSection = document.querySelector('ul li:nth-of-type(3) a div.circle');
+var fourthSection = document.querySelector('ul li:nth-of-type(4) a div.circle');
+var fifthSection = document.querySelector('ul li:nth-of-type(5) a div.circle');
+var sixthSection = document.querySelector('ul li:nth-of-type(6) a div.circle');
 
 function countHeight(){
   counter.innerHTML="height = " + window.pageYOffset;
@@ -42,6 +42,18 @@ function changeColor(){
     fifthSection.classList.remove('white');
     sixthSection.classList.add('white');
   }
+
+  // if (height < 600){
+  //       firstSection.classList.add('white');
+  //   } else {
+  //       firstSection.classList.remove('white');
+  //   }
+  //   if (height > 600) {
+  //         secondSection.classList.add('white');
+  //     } else {
+  //         second.classList.remove('white');
+  //     }
+
 
 }
 
