@@ -7,14 +7,14 @@ var fifthSection = document.querySelector('ul li:nth-of-type(5) a div.circle');
 var sixthSection = document.querySelector('ul li:nth-of-type(6) a div.circle');
 
 function countHeight(){
-  counter.innerHTML="height = " + window.pageYOffset;
+  counter.innerHTML="scrollpos = " + window.pageYOffset + " en heightWindow = " + window.outerHeight;
 }
 
 window.addEventListener('scroll', countHeight);
 
 function changeColor(){
   var height = window.pageYOffset;
-  if(height < 600){
+  if(height < 600 ){
     firstSection.classList.add('white');
     secondSection.classList.remove('white');
 
@@ -43,21 +43,8 @@ function changeColor(){
     sixthSection.classList.add('white');
   }
 
-  // if (height < 600){
-  //       firstSection.classList.add('white');
-  //   } else {
-  //       firstSection.classList.remove('white');
-  //   }
-  //   if (height > 600) {
-  //         secondSection.classList.add('white');
-  //     } else {
-  //         second.classList.remove('white');
-  //     }
-
-
 }
 
 window.addEventListener('scroll', changeColor);
-
 
 console.log(window.scrollY);

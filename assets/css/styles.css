@@ -1,5 +1,7 @@
 body{
-  background-color: red;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 *{
@@ -15,6 +17,14 @@ section{
   background-size: cover;
 }
 
+
+/* .scrolling-box{
+  height: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+} */
+
+
 p.height-counter{
   position: fixed;
 }
@@ -27,7 +37,7 @@ h1, h2{
 
 h1{
   color: white;
-  font-size: 4em;
+  font-size: 5em;
 }
 
 p{
@@ -38,6 +48,16 @@ p{
 div.container-welkom{
   padding-top: 10rem;
   padding-left: 5rem;
+}
+
+div.container-about{
+  padding:13rem 18rem;
+}
+
+div.container-about h2{
+  color: white;
+  font-size: 2.7rem;
+  text-shadow: -2px 0 1rem black;
 }
 
 div.scroll-indicator{
@@ -68,12 +88,46 @@ ul{
   list-style-type: none;
 }
 
+/* style sections */
+
 section.welkom{
   background-position: top;
-  background-image: url('https://images.unsplash.com/photo-1495554626159-905646f110da?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e6d8ded2926295cfca69b6cfd66db7d1&auto=format&fit=crop&w=1350&q=80');
+  background-image:  url('https://images.unsplash.com/photo-1475870434835-a633fd526088?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8da48ab1e815c6ba9ba42542567cd6ac&auto=format&fit=crop&w=1350&q=80');
 }
 
 section:nth-of-type(2){
   background-attachment: scroll;
-  background-image: url('https://images.unsplash.com/photo-1503341185129-85e5373a73b8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=27d0256bdd53cc574b35643f3c3e89b5&auto=format&fit=crop&w=1350&q=80');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://images.unsplash.com/photo-1486611367184-17759508999c?ixlib=rb-0.3.5&s=1d9a20d398d8a6df7eb0ba35c4b17dc6&auto=format&fit=crop&w=1266&q=80');
+}
+
+section:nth-of-type(3){
+  background-attachment: scroll;
+  background-color: #D81159;
+  background-position: center;
+  background-image: url('https://images.unsplash.com/photo-1501580121338-18e859f87400?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=979de881b3346f9ab13eacfd08535cfa&auto=format&fit=crop&w=1350&q=80');
+}
+
+section:nth-of-type(4){
+  background-attachment: scroll;
+  background-position: top;
+  background-color: #FFBC42;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('http://www.etonline.com/sites/default/files/images/2018-02/r1308_cov_boseman.jpg');
+}
+
+section:nth-of-type(5){
+  background-attachment: scroll;
+  background-color: #44FFD2;
+  background-image: url('https://images.unsplash.com/photo-1518362165686-c587a1de1003?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=46583d88104bb6f4fc222747b47ad66d&auto=format&fit=crop&w=1350&q=80');
+}
+
+section:nth-of-type(6){
+  background-attachment: scroll;
+  background-color: #19B5FE;
+  background-image: url('https://images.unsplash.com/photo-1464666495445-5a33228a808e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a079e54712e88bef1c9e4463de87e15a&auto=format&fit=crop&w=1300&q=80');
+}
+
+section:nth-of-type(3):hover,section:nth-of-type(4):hover,section:nth-of-type(5):hover,section:nth-of-type(6):hover{
+  box-shadow:
+        inset 0px 15px 40px -10px #000,
+        inset 0px -15px 40px -10px #000;
 }
