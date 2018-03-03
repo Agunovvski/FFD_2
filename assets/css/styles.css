@@ -13,7 +13,7 @@ body{
 section{
   height: 100vh;
   background-position: center;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-size: cover;
 }
 
@@ -43,6 +43,8 @@ h1{
 p{
   font-family: Georgia,serif;
   color: white;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
 }
 
 div.container-welkom{
@@ -63,7 +65,8 @@ div.container-about h2{
 div.scroll-indicator{
   position: fixed;
   top: 50vh;
-  left: 95vw;
+  transform: translate(-50%, -50%);
+  right: 3vw;
 }
 
 
@@ -130,4 +133,33 @@ section:nth-of-type(3):hover,section:nth-of-type(4):hover,section:nth-of-type(5)
   box-shadow:
         inset 0px 15px 40px -10px #000,
         inset 0px -15px 40px -10px #000;
+}
+
+
+/* tablet */
+
+@media only screen and (max-width: 60em) and (min-width: 30em){
+
+
+  div.container-welkom{
+    padding-top: 5rem;
+    padding-left: 5rem;
+  }
+
+  div.container-about{
+    padding:7rem;
+  }
+
+}
+
+@media (max-width: 30em){
+
+  div.container-welkom{
+    padding: 5rem;
+  }
+
+  div.container-about{
+    padding:5rem;
+  }
+
 }
