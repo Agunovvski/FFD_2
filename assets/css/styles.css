@@ -74,9 +74,9 @@ div.scroll-indicator{
 
 div.circle {
     /* background-color:white; */
-    width: .7rem;
-    height: .7rem;
-    border-radius: 50%;
+    width: .2rem;
+    height: 1rem;
+    /* border-radius: 50%; */
     margin-top: .3rem;
     border: white 1px solid;
     -webkit-transition: width 1s, height 1s;
@@ -152,7 +152,7 @@ section:nth-of-type(3):hover,section:nth-of-type(4):hover,section:nth-of-type(5)
     font-size: 1rem;
     padding: .6rem;
     border: none;
-    border-radius: 2rem;
+    /* border-radius: .5rem; */
     box-shadow: inset 0 -0.1875em 0.0625em #2e2e2e;
     flex-grow: 2;
     position: relative;
