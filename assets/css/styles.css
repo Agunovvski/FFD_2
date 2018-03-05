@@ -53,7 +53,7 @@ div.container-welkom{
 }
 
 div.container-about{
-  padding:13rem 18rem;
+  padding:10rem 16rem;
 }
 
 div.container-about h2{
@@ -135,6 +135,75 @@ section:nth-of-type(3):hover,section:nth-of-type(4):hover,section:nth-of-type(5)
         inset 0px -15px 40px -10px #000;
 }
 
+.project .button{
+  top: 0vh;
+}
+
+.project .button:hover{
+  top: -5vh;
+}
+
+.button{
+  background-color: white;
+    font-family: 'Oswald', sans-serif;
+    color: black;
+    font-size: 1rem;
+    padding: .6rem;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: inset 0 -0.1875em 0.0625em #2e2e2e;
+    flex-grow: 2;
+    position: relative;
+    top: 40vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    margin-bottom: 1rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow:
+           0px 15px 40px -10px #000;
+           -webkit-transition-property: top, bottom;
+      -webkit-transition-duration: 0.5s;
+      transition-property: top, bottom;
+      transition-duration: 0.5s;
+}
+
+.button:hover{
+  top: 35vh;
+}
+
+.button:active{
+  box-shadow:
+         inset 0px 15px 40px -10px #000;
+}
+
+
+.pmshow{
+  /* width: 5rem;
+  height: 5rem; */
+  background-color: black;
+}
+
+div.progress-menu{
+  height: 2rem;
+  width: 2rem;
+  position: fixed;
+  background-color: white;
+  border-radius: 1rem;
+  top: 5vw;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  /* transition: opacity .2s ease-out, max-height .2s ease-out, max-width .2s ease-out;
+  opacity: 0; */
+  /* overflow: hidden; */
+}
+/* p.progress-count{
+  color: black;
+  font-size: 1rem;
+} */
+
+
 
 /* tablet */
 
@@ -147,7 +216,7 @@ section:nth-of-type(3):hover,section:nth-of-type(4):hover,section:nth-of-type(5)
   }
 
   div.container-about{
-    padding:7rem;
+    padding:5rem;
   }
 
 }
@@ -155,11 +224,11 @@ section:nth-of-type(3):hover,section:nth-of-type(4):hover,section:nth-of-type(5)
 @media (max-width: 30em){
 
   div.container-welkom{
-    padding: 5rem;
+    padding:2rem;
   }
 
   div.container-about{
-    padding:5rem;
+    padding:2rem;
   }
 
 }

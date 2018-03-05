@@ -54,7 +54,28 @@ function changeColor(){
 
 window.addEventListener('scroll', changeColor);
 
-console.log(window.scrollY);
+
+
+var progressMenu = document.querySelector('.progress-menu');
+
+function progressProject(){
+
+  var height = window.pageYOffset;
+  if(height >= h+(h/2)){
+    progressMenu.classList.add('pmshow');
+  }
+  if(height >= h*2+(h/2)){
+
+  }
+  if(height >= h*3+(h/2)){
+
+  }
+  if(height >= h*4+(h/2)){
+
+  }
+}
+
+window.addEventListener('scroll', progressProject);
 
 // proberen smooth scroll
 
@@ -69,3 +90,13 @@ console.log(window.scrollY);
 // }
 //
 // secondLi.addEventListener('click', smoothScroll,false);
+
+
+var workButton = document.querySelector('.project .button');
+var body = document.body;
+
+function scrollWork(){
+  body.scrollTop = h+(h/2);
+}
+
+workButton.addEventListener('scroll', scrollWork, false);
