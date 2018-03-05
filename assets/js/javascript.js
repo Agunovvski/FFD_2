@@ -6,11 +6,11 @@ var fourthSection = document.querySelector('ul li:nth-of-type(4) a div.circle');
 var fifthSection = document.querySelector('ul li:nth-of-type(5) a div.circle');
 var sixthSection = document.querySelector('ul li:nth-of-type(6) a div.circle');
 
-function countHeight(){
-  counter.innerHTML="scrollpos = " + window.pageYOffset + " en heightWindow = " + window.innerHeight;
-}
-
-window.addEventListener('scroll', countHeight);
+// function countHeight(){
+//   counter.innerHTML="scrollpos = " + window.pageYOffset + " en heightWindow = " + window.innerHeight;
+// }
+//
+// window.addEventListener('scroll', countHeight);
 
 var w = window.innerWidth;
 var h = window.innerHeight;
