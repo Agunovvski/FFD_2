@@ -41,7 +41,7 @@ Tot slot met mobiel
 
 ## Link to project
 
-* https://oege.ie.hva.nl/~tarumaa001/FFD_2/
+* https://oege.ie.hva.nl/~tarumaa001/ffd-opdr2-semidone/
 
 ## Acknowledgments
 
