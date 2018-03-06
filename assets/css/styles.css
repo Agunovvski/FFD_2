@@ -1,7 +1,5 @@
 body{
   height: 100vh;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
   color: white;
   font-family: 'Oswald', sans-serif;
 }
@@ -52,6 +50,7 @@ p{
 div.container-welkom{
   padding-top: 10rem;
   padding-left: 5rem;
+  overflow: hidden;
 }
 
 div.container-about{
@@ -106,13 +105,25 @@ section:nth-of-type(2){
 }
 
 section:nth-of-type(3){
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 300ms;
   background-attachment: scroll;
   background-color: #D81159;
   background-position: center;
   background-image: url('https://images.unsplash.com/photo-1501580121338-18e859f87400?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=979de881b3346f9ab13eacfd08535cfa&auto=format&fit=crop&w=1350&q=80');
 }
 
+section:nth-of-type(3).section-show, section:nth-of-type(4).section-show, section:nth-of-type(5).section-show, section:nth-of-type(6).section-show{
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 300ms;
+}
+
 section:nth-of-type(4){
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 300ms;
   background-attachment: scroll;
   background-position: top;
   background-color: #FFBC42;
@@ -120,12 +131,18 @@ section:nth-of-type(4){
 }
 
 section:nth-of-type(5){
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 300ms;
   background-attachment: scroll;
   background-color: #44FFD2;
   background-image: url('https://images.unsplash.com/photo-1518362165686-c587a1de1003?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=46583d88104bb6f4fc222747b47ad66d&auto=format&fit=crop&w=1350&q=80');
 }
 
 section:nth-of-type(6){
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 300ms;
   background-attachment: scroll;
   background-color: #19B5FE;
   background-image: url('https://images.unsplash.com/photo-1464666495445-5a33228a808e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a079e54712e88bef1c9e4463de87e15a&auto=format&fit=crop&w=1300&q=80');
@@ -156,7 +173,7 @@ section:nth-of-type(3):hover,section:nth-of-type(4):hover,section:nth-of-type(5)
     box-shadow: inset 0 -0.1875em 0.0625em #2e2e2e;
     flex-grow: 2;
     position: relative;
-    top: 40vh;
+    /* top: 40vh; */
     left: 50vw;
     transform: translate(-50%, -50%);
     margin-bottom: 1rem;
@@ -169,10 +186,25 @@ section:nth-of-type(3):hover,section:nth-of-type(4):hover,section:nth-of-type(5)
       -webkit-transition-duration: 0.5s;
       transition-property: top, bottom;
       transition-duration: 0.5s;
+      z-index: 99;
 }
 
-.button:hover{
+.to-about{
+  animation-duration: 1.8s;
+  animation-name: callAction;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* .button:hover{
   top: 35vh;
+} */
+.fa-camera-retro{
+  position: relative;
+  top: 40vh;
+  left: 43.3vw;
+  transform: translate(-50%, -50%);
+  z-index: 0;
 }
 
 .button:active{
@@ -180,11 +212,14 @@ section:nth-of-type(3):hover,section:nth-of-type(4):hover,section:nth-of-type(5)
          inset 0px 15px 40px -10px #000;
 }
 
+@keyframes callAction {
+  from {
+    top:40vh;
+  }
 
-.pmshow{
-  /* width: 5rem;
-  height: 5rem; */
-  background-color: black;
+  to {
+    top: 35vh;
+  }
 }
 
 div.progress-menu{
@@ -192,21 +227,41 @@ div.progress-menu{
   width: 2rem;
   position: fixed;
   background-color: white;
-  border-radius: 1rem;
+  border-radius: 5rem;
   top: 5vw;
   left: 50vw;
   transform: translate(-50%, -50%);
-  /* transition: opacity .2s ease-out, max-height .2s ease-out, max-width .2s ease-out;
-  opacity: 0; */
-  /* overflow: hidden; */
+  transition: opacity 5s ease-in;
+  opacity: 0;
+
 }
-/* p.progress-count{
+
+div.progress-menu.pmshow{
+  /* background-color: black; */
+  opacity: 1;
+}
+
+.pmshow{
+  /* width: 5rem;
+  height: 5rem; */
+  /* opacity: 1; */
+  background-color: black;
+}
+
+
+p.progress-count{
   color: black;
-  font-size: 1rem;
-} */
+  font-size: 1.2rem;
+  padding-left: 0.75rem;
+}
 
 .progress-slash{
+  transition: opacity 3s ease-in;
+  opacity: 0;
+}
 
+.progress-slash.slash-show{
+  opacity: 1;
 }
 
 a.links, a.highlight{
@@ -236,6 +291,10 @@ a.highlight{
     padding:5rem;
   }
 
+  .fa-camera-retro{
+    left: 40vw;
+  }
+
 }
 
 @media (max-width: 30em){
@@ -246,6 +305,10 @@ a.highlight{
 
   div.container-about{
     padding:2rem;
+  }
+
+  .fa-camera-retro{
+    left: 30vw;
   }
 
 }
